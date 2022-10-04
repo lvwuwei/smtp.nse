@@ -27,7 +27,7 @@ action = function(host, port)
             line = string.gsub(line,",","\r\n")
             result = result .. line .. "\r\n"
         end    
-        senddata="subject:The scan result\r\n" .. "from:reborn\r\n" .."\r\n".. result
+        senddata="subject:The scan result\r\n" .. "from:lvwuwei\r\n" .."\r\n".. result
         local st2 ,resp2 = smtp.datasend(socket,senddata)  
         print(st2,resp2)
         smtp.quit(socket)
